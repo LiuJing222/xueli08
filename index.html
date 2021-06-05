@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./demo.css">
+    <title>天官赐福</title>
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="nav_ul">
+            <li class="nav_li1">
+                <img src="images/kuwo.jpg">
+            </li>
+            <li class="nav_li2">
+                <a href="#">首页</a>
+            </li>
+            <li class="nav_li3">
+                <a href="#">榜单</a>
+            </li>
+            <li class="nav_li4">
+                <a href="#">歌手</a>
+            </li>
+            <li class="nav_li5">
+                <a href="#">下载酷我客户端</a>
+            </li>
+            <li class="nav_li6">
+                <a href="#">美女秀</a>
+            </li>
+            <li class="nav_li7">
+                <a href="#">酷我耳机</a>
+            </li>
+            <li class="nav_li8">
+                <a href="#">VIP会员</a>
+            </li>
+            <li class="nav_li9">
+                <a href="#">i听</a>
+            </li>
+            <li class="nav_li10">
+                <a href="#">更多服务</a>
+            </li>
+            <li class="nav_li11">
+                <a href="#">登录</a>
+            </li>
+            <li class="nav_li12">
+                <a href="#">找到好音乐</a>
+            </li>
+        </ul>
+    </div>
+    <div class="con">
+        <!-- 左半面 -->
+        <div class="left">
+            <div class="title1">
+                <div class="title">
+                    无别
+                </div>
+                <div class="details">
+                    <div>专辑：</div><span>歌曲大全</span>
+                    <div>歌手：</div><span>尚辰</span>
+                    <div>分享</div>
+                    <img/>
+                    <span>评论</span>
+                </div>
+                <p class="upTime">
+                    上传时间：2015-10-02 歌曲来源：民大相思湖网球社
+                </p>
+                <br/>
+                <hr/>
+                <br/>
+                <div class="lyrics">
+
+                    <p>情丝挥剑 断了纠缠仍相恋 </p>
+                    <p>有谁怜 灭了明灯对残月</p>
+                    <p>往事化蝶 掠过花丛又离别 </p>
+                    <p>忍着泪 等待重遇的喜悦 </p>
+                    <p>花瓣落成雪 满城游魂夜 </p>
+                    <p>曾信仰的爱丝毫未冷却 </p>
+                    <p>容颜未憔悴 徒让白衣袖成灰</p>
+                    <p>和宿命不停追逐后 相会 </p>
+                    <p>别后 花枯萎 眷恋盛开过的</p>
+                    <p>一回眸 满眼幸福的诗篇 </p>
+                    <p>别后 花残缺 还剩绽放过的</p>
+                    <p>错过你 尝尽酸甜都无味 </p>
+                    <p>错过你 尝尽酸甜都无味 </p>
+                    <p>情丝挥剑 缘份消失仍隐约 </p>
+                    <p>有谁恋 灭了明灯对残月 </p>
+                    <p>往事化蝶 昨日比翼今双飞 </p>
+                    <p>忍着泪 等待重遇的喜悦</p>
+                    <p>花瓣落成雪 满城游魂夜 </p>
+                    <p>曾信仰的爱丝毫未冷却</p>
+
+
+                </div>
+            </div>
+            <!-- 右半面-->
+            <div class="right">
+                <div class="song_pic">
+                    <img src="images/天官赐福.jpg">
+                </div>
+                <!--音频-->
+                <div class="song">
+                    <div class="song_video">
+                        <audio controls loop="true" id="myaudio">
+                    <source type="audio/mp3" src="./video/尚辰 - 无别（《天官赐福》动画片头曲）（翻自 张信哲）.mp3"></source>
+                </audio>
+                        <!--音频开始按钮-->
+                        <div id="start">
+                        </div>
+                        <!-- 进度条 -->
+                        <div id="process">
+                            <div id="dot"></div>
+                        </div>
+                        <!-- 时间 -->
+                        <div id="playTime">
+
+                        </div>
+                        <!-- 静音 -->
+                        <div id="mute">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="download">
+                    <img/> 免费下载这首歌
+                </div>
+            </div>
+        </div>
+        <!--评论-->
+        <br/>
+        <div class="commit">
+            <p>评论 1703条评论</p>
+            <hr/>
+            <img src="./images/花城.jpg" class="commit_img" />
+            <input type="text" value="分享你的音乐见解" id="text" />
+            <img src="./images/smile.jpg" id="smile" />
+            <input type="button" value="评论" id="addButton" />
+            <ul class="commit-list">
+                <li class="commit1"></li>
+                <li class="commit2"></li>
+                <li class="commit3"></li>
+                <li class="commit4"></li>
+            </ul>
+        </div>
+</body>
+<script>
+    var mymusic = document.getElementById("mymusic");
+    var start = document.getElementById("start");
+    var process = document.getElementById("process");
+    var dot = document.getElementById("dot");
+    var playTime = document.getElementById("playTime");
+    var mute = document.getElementById("mute");
+    var text = document.getElementById("text");
+    var smile = document.getElementById("smile");
+    var addButton = document.getElementById("addButton");
+    var commit_list = document.getElementsByClassName("commit-list");
+    var commit1 = document.getElementsByClassName("commit1");
+    var commit2 = document.getElementsByClassName("commit2");
+    var commit3 = document.getElementsByClassName("commit3");
+    var commit4 = document.getElementsByClassName("commit4");
+
+
+
+    var onOff = false;
+    start.onclick = function() {
+            if (!onOff) {
+                start.style.backgroundPosition = "191px 40px";
+                myaudio.play();
+                onOff = true;
+                setInterval(getcurrenttime, 1000); //时间
+                setInterval(getprocess, 1); //进度条
+            } else {
+                start.style.backgroundPosition = "192px 121px";
+                myaudio.pause();
+                onOff = false;
+            }
+        }
+        //获取时间函数
+    playTime.innerHTML = "00: 00";
+    getcurrenttime = function() {
+        var min = Math.floor(myaudio.currentTime / 60);
+        var sec = Math.floor(myaudio.currentTime - min * 60);
+        if (min < 10) {
+            min = "0" + min;
+        } else {
+            min = min;
+        }
+        if (sec < 10) {
+            sec = "0" + sec;
+        } else {
+            sec = sec;
+        }
+        var currenttime = min + ":" + sec;
+        playTime.innerHTML = currenttime;
+    }
+
+    //进度条函数
+    getprocess = function() {
+        dot.style.left = "" + parseFloat(myaudio.currentTime / myaudio.duration) * 200 + "px";
+    }
+
+    //静音设置
+    var sound = false;
+    mute.onclick = function() {
+        if (!sound) {
+            mute.style.backgroundPosition = "-309px -109px";
+            myaudio.muted = true;
+            sound = true;
+        } else {
+            mute.style.backgroundPosition = "-263px -109px";
+            myaudio.muted = false;
+            sound = false
+        }
+    }
+
+    //笑脸
+    smile.onclick = function() {
+            text.innerHTML = "<imgsrc=''. / images / smile.jpg '/>";
+        }
+        //本地存储
+    var n = 0;
+    addButton.onclick = function() {
+        var text = document.getElementById("text").value;
+        localStorage.setItem("sticky", text);
+        var time = new Date();
+        localStorage.setItem('storagetime', time);
+        var getDisconnectTime = localStorage.getItem('storagetime');
+        commit_list[n].innerHTML = "" + localStorage.getItem('storagetime');
+
+        //换行问题
+
+        commit_list[n].innerHTML = "<li>" + localStorage.getItem("sticky") + "</li>";
+
+        // commit_list[n].innerHTML = "" + localStorage.getItem("sticky");
+
+        console.log(localStorage.getItem("sticky"), n);
+        console.log(getDisconnectTime, n);
+        n = n + 1;
+    }
+</script>
+
+</html>

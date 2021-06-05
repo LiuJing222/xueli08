@@ -1,0 +1,463 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/*导航*/
+
+.nav {
+    /* width: 100%; */
+    height: 60px;
+    background: #181818;
+    margin: 0 auto;
+    padding-left: 100px;
+}
+
+.nav_ul {
+    width: 1000px;
+    height: 60px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.nav_li1 {
+    width: 120px;
+    height: 55px;
+    color: #fff;
+}
+
+.nav_li1 img {
+    display: block;
+    width: 110px;
+    height: 50px;
+}
+
+.nav_li2 a {
+    width: 120px;
+    font-size: 20px;
+    color: yellow;
+    position: absolute;
+    top: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.nav_li3 a {
+    width: 120px;
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.nav_li4 a {
+    width: 120px;
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.nav_li5 a {
+    width: 150px;
+    font-size: 20px;
+    opacity: 0.8;
+    color: #fff;
+    position: absolute;
+    top: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.nav_li6 {
+    background-image: url(./images/tools.png);
+    background-position: 74% 12%;
+    /* position: absolute; */
+    margin-top: 20px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    margin-left: 100px;
+}
+
+.nav_li6 a {
+    width: 150px;
+    font-size: 15px;
+    color: #fff;
+    opacity: 0.8;
+    position: absolute;
+    margin-left: 20px;
+    top: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.nav_li7 {
+    background-image: url(./images/tools.png);
+    background-position: 74% 12%;
+    /* position: absolute; */
+    margin-top: 20px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.nav_li7 a {
+    width: 150px;
+    font-size: 15px;
+    color: #fff;
+    opacity: 0.8;
+    position: absolute;
+    margin-left: 20px;
+    top: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.nav_li8 {
+    background-image: url(./images/tools.png);
+    background-position: 74% 12%;
+    /* position: absolute; */
+    margin-top: 20px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+.nav_li8 a {
+    width: 150px;
+    font-size: 15px;
+    color: #fff;
+    opacity: 0.8;
+    position: absolute;
+    margin-left: 20px;
+    top: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.nav_li9 {
+    background-image: url(./images/tools.png);
+    background-position: 74% 12%;
+    /* position: absolute; */
+    margin-top: 20px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+.nav_li9 a {
+    width: 150px;
+    font-size: 15px;
+    color: #fff;
+    opacity: 0.8;
+    position: absolute;
+    margin-left: 20px;
+    top: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.nav_li10 a {
+    width: 150px;
+    font-size: 15px;
+    color: #fff;
+    position: absolute;
+    margin-left: 10px;
+    top: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.nav_li11 a {
+    width: 150px;
+    font-size: 15px;
+    color: #fff;
+    position: absolute;
+    margin-left: 30px;
+    top: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.nav_li12 a {
+    width: 150px;
+    height: 30px;
+    font-size: 10px;
+    color: #fff;
+    padding-left: 10px;
+    padding-top: 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 15px;
+    margin-left: 30px;
+    background-image: url(./images/search.png);
+    background-size: 150px 30px;
+    background-repeat: no-repeat;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.con {
+    width: 1536px;
+    height: 800px;
+    display: inline;
+    background-color: tomato;
+}
+
+.left {
+    width: 767px;
+    height: 600px;
+    background-color: antiquewhite;
+    margin-right: 2px;
+}
+
+.right {
+    width: 767px;
+    height: 600px;
+    background-color: tomato;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+}
+
+.title1 {
+    width: 600px;
+    height: 400px;
+    margin-left: 100px;
+}
+
+.title {
+    width: 300px;
+    height: 100px;
+    font-weight: bold;
+    font-size: 50px;
+    margin-left: 180px;
+}
+
+.details {
+    width: 600px;
+    height: 40px;
+    display: flex;
+    margin-left: 100px;
+}
+
+.details div {
+    font: 30px;
+    font-weight: bold;
+}
+
+.details span {
+    font: 26px;
+    color: rgb(206, 206, 8);
+    margin-right: 20px;
+}
+
+.upTime {
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 140px;
+}
+
+.details img {
+    width: 14px;
+    height: 14px;
+    margin-top: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-image: url(./images/leavenote.jpg);
+}
+
+.lyrics {
+    margin-left: 100px;
+    width: 600px;
+    height: 400px;
+    padding-left: 80px;
+}
+
+.lyrics p:nth-child(9) {
+    font-size: 20px;
+    color: rgb(202, 202, 14);
+}
+
+.song_pic img {
+    width: 350px;
+    height: 350px;
+    border: 1px solid #fff;
+    border-radius: 175px;
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    animation: animation1 5s linear infinite;
+}
+
+@keyframes animation1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.song {
+    width: 800px;
+    height: 100px;
+    display: inline-flex;
+    position: absolute;
+    top: 440px;
+    right: -40px;
+}
+
+.song_video {
+    height: 300px;
+    width: 600px;
+    padding-top: 10px;
+}
+
+#myaudio {
+    width: 0px;
+    height: 0px;
+}
+
+#start {
+    background-image: url(./images/tools.png);
+    background-position: 192px 121px;
+    /* background-color: #ccc; */
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    margin-left: 200px;
+    float: left;
+}
+
+#process {
+    width: 200px;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 37px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #ccc;
+    float: left;
+    position: relative;
+}
+
+#dot {
+    width: 5px;
+    width: 5px;
+    border: 5px solid yellow;
+    border-radius: 100px;
+    position: absolute;
+    left: 0px;
+}
+
+#playTime {
+    width: 50px;
+    height: 30px;
+    margin-top: 30px;
+    float: left;
+    margin-right: 10px;
+    font-size: 15px;
+    ;
+}
+
+#mute {
+    width: 20px;
+    height: 20px;
+    margin-top: 30px;
+    background-image: url(./images/tools.png);
+    /* background-position: -309px -109px; */
+    background-position: -263px -109px;
+    float: left;
+}
+
+.download {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    line-height: 35px;
+    border: 1px solid #585890;
+    background-color: #585890;
+    position: absolute;
+    top: 530px;
+    right: 300px;
+}
+
+.download img {
+    width: 26px;
+    height: 26px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 20px;
+    border: 1px solid #585890;
+    background-image: url(./images/tools.png);
+    background-position: 91px 100px;
+}
+
+.commit {
+    width: 100%;
+    height: 700px;
+    background-color: thistle;
+    position: relative;
+}
+
+.commit p {
+    font-size: 15px;
+    margin-left: 80px;
+    line-height: 30px;
+}
+
+.commit_img {
+    width: 80x;
+    height: 80px;
+    margin-left: 310px;
+    position: absolute;
+    top: 40px;
+}
+
+.commit #text {
+    width: 600px;
+    height: 150px;
+    position: absolute;
+    left: 390px;
+    color: #ccc;
+}
+
+#smile {
+    width: 22px;
+    height: 20px;
+    position: absolute;
+    top: 200px;
+    left: 870px;
+}
+
+.commit #addButton {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    left: 900px;
+    top: 200px;
+    background-color: rgb(253, 199, 128);
+}
+
+.commit-list {
+    padding-left: 400px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.commit-list li {
+    width: 600px;
+    height: 80px;
+    border: 1px solid #3aa;
+    /* background-color: yellow; */
+}
