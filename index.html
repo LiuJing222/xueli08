@@ -91,7 +91,6 @@
                     <p>往事化蝶 昨日比翼今双飞 </p>
                     <p>忍着泪 等待重遇的喜悦</p>
                     <p>花瓣落成雪 满城游魂夜 </p>
-                    <p>曾信仰的爱丝毫未冷却</p>
 
 
                 </div>
@@ -130,19 +129,15 @@
             </div>
         </div>
         <!--评论-->
-        <br/>
         <div class="commit">
             <p>评论 1703条评论</p>
-            <hr/>
-            <img src="./images/花城.jpg" class="commit_img" />
-            <input type="text" value="分享你的音乐见解" id="text" />
-            <img src="./images/smile.jpg" id="smile" />
-            <input type="button" value="评论" id="addButton" />
-            <ul class="commit-list">
-                <li class="commit1"></li>
-                <li class="commit2"></li>
-                <li class="commit3"></li>
-                <li class="commit4"></li>
+            <div class="commit1">
+                <img src="./images/花城.jpg" class="commit1_img" />
+                <input type="text" value="分享你的音乐见解" id="text" />
+                <img src="./images/smile.jpg" id="smile" />
+                <input type="button" value="评论" id="addButton" />
+            </div>
+            <ul id="commitlist">
             </ul>
         </div>
 </body>
@@ -156,11 +151,7 @@
     var text = document.getElementById("text");
     var smile = document.getElementById("smile");
     var addButton = document.getElementById("addButton");
-    var commit_list = document.getElementsByClassName("commit-list");
-    var commit1 = document.getElementsByClassName("commit1");
-    var commit2 = document.getElementsByClassName("commit2");
-    var commit3 = document.getElementsByClassName("commit3");
-    var commit4 = document.getElementsByClassName("commit4");
+    var commitlist = document.getElementById("commitlist");
 
 
 
@@ -221,24 +212,24 @@
             text.innerHTML = "<imgsrc=''. / images / smile.jpg '/>";
         }
         //本地存储
-    var n = 0;
     addButton.onclick = function() {
         var text = document.getElementById("text").value;
         localStorage.setItem("sticky", text);
         var time = new Date();
         localStorage.setItem('storagetime', time);
-        var getDisconnectTime = localStorage.getItem('storagetime');
-        commit_list[n].innerHTML = "" + localStorage.getItem('storagetime');
 
         //换行问题
+        var newli = document.createElement("li");
+        newli.innerHTML = localStorage.getItem("sticky") + "<br/>" + localStorage.getItem('storagetime');
+        newli.style.width = "600px";
+        newli.style.height = "80px";
+        newli.style.marginLeft = "450px";
+        newli.style.border = "1px solid orange";
+        commitlist.appendChild(newli);
 
-        commit_list[n].innerHTML = "<li>" + localStorage.getItem("sticky") + "</li>";
 
-        // commit_list[n].innerHTML = "" + localStorage.getItem("sticky");
-
-        console.log(localStorage.getItem("sticky"), n);
-        console.log(getDisconnectTime, n);
-        n = n + 1;
+        console.log(localStorage.getItem("sticky"));
+        console.log(localStorage.getItem('storagetime'));
     }
 </script>
 
