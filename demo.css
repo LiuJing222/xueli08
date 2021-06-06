@@ -317,7 +317,7 @@ ul {
 }
 
 .song_video {
-    height: 300px;
+    height: 150px;
     width: 600px;
     padding-top: 10px;
 }
@@ -415,19 +415,26 @@ ul {
     line-height: 30px;
 }
 
-.commit_img {
+.commit1 {
+    width: 800px;
+    height: 220px;
+    margin: 0 auto;
+}
+
+.commit1_img {
     width: 80x;
     height: 80px;
-    margin-left: 310px;
     position: absolute;
     top: 40px;
 }
 
-.commit #text {
+.commit1 #text {
     width: 600px;
     height: 150px;
     position: absolute;
     left: 390px;
+    margin-bottom: 100px;
+    margin-left: 60px;
     color: #ccc;
 }
 
@@ -435,29 +442,22 @@ ul {
     width: 22px;
     height: 20px;
     position: absolute;
-    top: 200px;
-    left: 870px;
+    top: 190px;
+    left: 925px;
 }
 
 .commit #addButton {
     width: 100px;
     height: 30px;
     position: absolute;
-    left: 900px;
-    top: 200px;
+    left: 950px;
+    top: 190px;
     background-color: rgb(253, 199, 128);
 }
 
-.commit-list {
+.commitlist {
     padding-left: 400px;
-    margin-top: 200px;
+    margin-top: 500px;
     display: flex;
     flex-direction: column;
-}
-
-.commit-list li {
-    width: 600px;
-    height: 80px;
-    border: 1px solid #3aa;
-    /* background-color: yellow; */
 }
