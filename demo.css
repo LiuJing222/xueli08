@@ -11,6 +11,13 @@ ul {
     list-style-type: none;
 }
 
+body {
+    /* background-image: url(./images/bg.jpg);
+    background-size: 100%; */
+    background-color: rgb(255, 170, 164);
+    opacity: 0.9;
+}
+
 
 /*导航*/
 
@@ -215,14 +222,14 @@ ul {
 .left {
     width: 767px;
     height: 600px;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     margin-right: 2px;
 }
 
 .right {
     width: 767px;
     height: 600px;
-    background-color: tomato;
+    /* background-color: tomato; */
     position: absolute;
     top: 60px;
     right: 0px;
@@ -230,8 +237,8 @@ ul {
 
 .title1 {
     width: 600px;
-    height: 400px;
-    margin-left: 100px;
+    height: 200px;
+    margin-left: 250px;
 }
 
 .title {
@@ -239,7 +246,7 @@ ul {
     height: 100px;
     font-weight: bold;
     font-size: 50px;
-    margin-left: 180px;
+    margin-left: 220px;
 }
 
 .details {
@@ -256,7 +263,7 @@ ul {
 
 .details span {
     font: 26px;
-    color: rgb(206, 206, 8);
+    color: rgb(255, 65, 65);
     margin-right: 20px;
 }
 
@@ -277,9 +284,9 @@ ul {
 
 .lyrics {
     margin-left: 100px;
-    width: 600px;
+    width: 400px;
     height: 400px;
-    padding-left: 80px;
+    padding-left: 90px;
 }
 
 .lyrics p:nth-child(9) {
@@ -295,7 +302,7 @@ ul {
     position: absolute;
     top: 100px;
     right: 200px;
-    animation: animation1 5s linear infinite;
+    animation: animation1 10s linear infinite;
 }
 
 @keyframes animation1 {
@@ -330,7 +337,8 @@ ul {
 #start {
     background-image: url(./images/tools.png);
     background-position: 192px 121px;
-    /* background-color: #ccc; */
+    border-radius: 50px;
+    background-color: rgb(255, 118, 83);
     margin-top: 20px;
     width: 40px;
     height: 40px;
@@ -375,6 +383,8 @@ ul {
     margin-top: 30px;
     background-image: url(./images/tools.png);
     /* background-position: -309px -109px; */
+    background-color: rgb(255, 145, 0);
+    opacity: 0.5;
     background-position: -263px -109px;
     float: left;
 }
@@ -405,23 +415,23 @@ ul {
 .commit {
     width: 100%;
     height: 700px;
-    background-color: thistle;
+    /* background-color: thistle; */
     position: relative;
 }
 
-.commit p {
+.commit_p1 {
     font-size: 15px;
-    margin-left: 80px;
+    margin-left: 200px;
     line-height: 30px;
 }
 
 .commit1 {
     width: 800px;
-    height: 220px;
+    height: 200px;
     margin: 0 auto;
 }
 
-.commit1_img {
+#commit1_img {
     width: 80x;
     height: 80px;
     position: absolute;
@@ -433,17 +443,20 @@ ul {
     height: 150px;
     position: absolute;
     left: 390px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     margin-left: 60px;
     color: #ccc;
+    background-color: rgba(240, 252, 218, 0.699);
 }
 
 #smile {
     width: 22px;
     height: 20px;
     position: absolute;
+    border-radius: 50px;
+    ;
     top: 190px;
-    left: 925px;
+    left: 450px;
 }
 
 .commit #addButton {
@@ -455,9 +468,46 @@ ul {
     background-color: rgb(253, 199, 128);
 }
 
-.commitlist {
-    padding-left: 400px;
-    margin-top: 500px;
+#commit_p {
+    width: 500px;
+    height: 30px;
+    padding-left: 300px;
+    font-weight: bold;
+}
+
+#commitlist {
+    height: 350px;
+    width: 900px;
+    border-top: 1px solid #ccc;
+    margin-left: 300px;
+}
+
+
+/* 分页效果 */
+
+#page {
+    width: 700px;
+    height: 40px;
     display: flex;
-    flex-direction: column;
+    position: absolute;
+    top: 650px;
+    margin-left: 540px;
+}
+
+#page li {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    /* border: 1px solid orange; */
+    border-radius: 50px;
+    background-color: rgb(255, 88, 88);
+    margin-left: 20px;
+}
+
+#page a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 8px;
+    color: #000;
 }
