@@ -130,17 +130,43 @@
         </div>
         <!--评论-->
         <div class="commit">
-            <p>评论 1703条评论</p>
+            <p class="commit_p1">评论 1703条评论</p>
+            <hr/>
             <div class="commit1">
-                <img src="./images/花城.jpg" class="commit1_img" />
+                <img src="./images/花城.jpg" id="commit1_img" />
                 <input type="text" value="分享你的音乐见解" id="text" />
                 <img src="./images/smile.jpg" id="smile" />
                 <input type="button" value="评论" id="addButton" />
             </div>
-            <ul id="commitlist">
+            <hr/>
+            <p id="commit_p">精彩评论</p>
+            <div id="commitlistn">
+                <div id="commitlist">
+                </div>
+            </div>
+            <!-- 分页效果 -->
+            <ul class="page" id="page">
+                <li>
+                    <a id="former" href="##">
+                        < </a>
+                </li>
+                <li><a id="one" href="##"> 1</a></li>
+                <li><a id="two" href="##"> 2</a></li>
+                <li><a id="three" href="##"> 3</a></li>
+                <li class="more"><a id="five" href="##"> ...</a></li>
+                <li><a id="fore" href="##"> 17</a></li>
+                <li>
+                    <a id="next" href="##"> > </a>
+                </li>
             </ul>
         </div>
+
+
+
+
 </body>
+
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script>
     var mymusic = document.getElementById("mymusic");
     var start = document.getElementById("start");
@@ -151,7 +177,13 @@
     var text = document.getElementById("text");
     var smile = document.getElementById("smile");
     var addButton = document.getElementById("addButton");
+    var commitp = document.getElementById("commit_p")
     var commitlist = document.getElementById("commitlist");
+    var page = document.getElementById("page");
+    var commitlistn = document.getElementById("commitlistn");
+    // var commit1img = document.getElementById("commit_img");
+    var one = document.getElementById("one");
+    var two = document.getElementById("two");
 
 
 
@@ -212,26 +244,185 @@
             text.innerHTML = "<imgsrc=''. / images / smile.jpg '/>";
         }
         //本地存储
+    var n = 0;
     addButton.onclick = function() {
+        n = n + 1;
+        var someoneImg = document.getElementById("commit1_img");
         var text = document.getElementById("text").value;
-        localStorage.setItem("sticky", text);
+        var time = localStorage.setItem("sticky", text);
         var time = new Date();
         localStorage.setItem('storagetime', time);
 
-        //换行问题
-        var newli = document.createElement("li");
-        newli.innerHTML = localStorage.getItem("sticky") + "<br/>" + localStorage.getItem('storagetime');
-        newli.style.width = "600px";
-        newli.style.height = "80px";
-        newli.style.marginLeft = "450px";
-        newli.style.border = "1px solid yellow";
-        newli.style.backgroundColor = "rgb(252, 199, 102)";
-        commitlist.appendChild(newli);
+        //创建节点
+
+        var newdiv = document.createElement("div")
+        var newimg = document.createElement("img");
+        var newdiv2 = document.createElement("div");
+        var newspan = document.createElement("span");
+        var newdiv3 = document.createElement("div");
+        var newdiv4 = document.createElement("div");
+        var newdiv5 = document.createElement("div");
+        var button1 = document.createElement("button");
+        var newdiv6 = document.createElement("div");
+        var button2 = document.createElement("button");
+        var button3 = document.createElement("button");
+        var button4 = document.createElement("button");
 
 
+        //
+        commitlist.style.paddingLeft = "100px";
+        //newdiv
+        newdiv.style.width = "800px";
+        newdiv.style.height = "100px";
+        newdiv.style.display = "flex";
+        newdiv.style.borderTop = "1px solid red";
+        newdiv.style.borderBottom = "1px solid red";
+
+        //图片
+        newimg.innerHTML = localStorage.getItem("commitImg");
+        newimg.src = someoneImg.src;
+        newimg.style.width = "70px";
+        newimg.style.height = "70px";
+        newimg.style.border = "1px solid #fff";
+        newimg.style.marginRight = "20px";
+        newimg.style.marginTop = "10px";
+
+        //留言内容
+        newdiv2.style.width = "500px";
+        //留言人
+        newspan.innerHTML = "花城";
+        newspan.style.fontSize = "18px";
+        newspan.style.fontWeight = "bold";
+        newspan.style.color = "#e9a24e";
+
+        //留言内容
+        newdiv3.innerHTML = localStorage.getItem("sticky");
+        newdiv3.style.fontSize = "15px";
+        newdiv3.style.marginTop = "5px";
+        newdiv3.style.marginBottom = "5px";
+
+        //留言时间
+        // newdiv4.innerHTML = localStorage.getItem('storagetime');
+
+        var year = time.getFullYear();
+        var month = time.getMonth();
+        var months = month + 1;
+        var date = time.getDate();
+        var day = time.getDay();
+        var hour = time.getHours();
+        var minute = time.getMinutes();
+        var second = time.getSeconds();
+        var d = year + "-" + months + "-" + date + " " + hour + ":" + minute + ":" + second;
+
+        newdiv4.innerHTML = d;
+        newdiv4.style.marginTop = "28px";
+        newdiv4.style.fontSize = "12px";
+
+        //最后按钮部分
+        button1.innerHTML = "分享";
+        button1.style.fontSize = "10px";
+        button1.style.width = "30px";
+        button1.style.height = "20px";
+        button1.style.border = "1px solid #fff";
+        button1.style.marginTop = "10px";
+        button1.style.marginLeft = "50px";
+
+        button2.innerHTML = "删除";
+        button2.style.fontSize = "10px";
+        button2.style.width = "30px";
+        button2.style.height = "20px";
+        button2.style.border = "1px solid #fff";
+        button2.style.marginLeft = "3px";
+        button2.style.marginTop = "45px";
+
+        button3.innerHTML = "点赞";
+        button3.style.fontSize = "10px";
+        button3.style.width = "30px";
+        button3.style.height = "20px";
+        button3.style.border = "1px solid #fff";
+        button3.style.marginLeft = "3px";
+        button3.style.marginTop = "45px";
+
+        button4.innerHTML = "回复";
+        button4.style.fontSize = "10px";
+        button4.style.width = "30px";
+        button4.style.height = "20px";
+        button4.style.border = "1px solid #fff";
+        button4.style.marginLeft = "3px";
+        button4.style.marginTop = "45px";
+        //节点插入！！
+
+        newdiv.appendChild(newimg);
+        newdiv.appendChild(newdiv2);
+        newdiv.appendChild(newdiv5);
+
+        newdiv2.appendChild(newspan);
+        newdiv2.appendChild(newdiv3);
+        newdiv2.appendChild(newdiv4);
+
+        newdiv5.appendChild(button1);
+        newdiv5.appendChild(newdiv6);
+
+        newdiv6.appendChild(button2);
+        newdiv6.appendChild(button3);
+        newdiv6.appendChild(button4);
+        commitlist.appendChild(newdiv);
+
+
+
+        //分页效果
+        if (3 < n) {
+            commitlist.style.display = "none";
+            var commitlist1 = document.createElement("div");
+            commitlist1.style.width = "800px";
+            commitlist1.style.height = "100px";
+            commitlist1.style.marginLeft = "400px";
+            commitlist1.appendChild(newdiv);
+            commitlistn.appendChild(commitlist1);
+            //分页
+        }
+        //本地存储的删除
+        button2.onclick = function() {
+            window.localStorage.clear(text);
+            commitlist.removeChild(newdiv);
+            n = n - 1;
+            console.log(n);
+        }
+
+        // if (6 < n < 9) {
+        //     commitlist1.style.display = "none";
+        //     var commitlist2 = document.createElement("div");
+        //     commitlist2.style.width = "800px";
+        //     commitlist2.style.height = "100px";
+        //     // commitlist1.style.border = "1px solid red";
+        //     commitlist2.style.marginLeft = "400px";
+        //     // commitlist1.style.marginTop = "100px";
+        //     commitlistn.appendChild(commitlist2);
+
+
+
+        //     commitlist2.appendChild(newdiv);
+        //     //分页
+        // }
+        console.log(n);
         console.log(localStorage.getItem("sticky"));
         console.log(localStorage.getItem('storagetime'));
+
+        one.onclick = function() {
+            commitlist.style.display = "block";
+            commitlist1.style.display = "none";
+        }
+        two.onclick = function() {
+            commitlist.style.display = "none";
+            commitlist1.style.display = "block";
+
+        }
+
+
     }
+
+
+    // https://liujing222.github.io/xueli08/index.html
 </script>
 
 </html>
