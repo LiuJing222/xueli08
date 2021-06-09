@@ -100,66 +100,80 @@
                 <div class="song_pic">
                     <img src="images/天官赐福.jpg">
                 </div>
-                <!--音频-->
-                <div class="song">
-                    <div class="song_video">
-                        <audio controls loop="true" id="myaudio">
-                    <source type="audio/mp3" src="./video/尚辰 - 无别（《天官赐福》动画片头曲）（翻自 张信哲）.mp3"></source>
-                </audio>
-                        <!--音频开始按钮-->
-                        <div id="start">
-                        </div>
-                        <!-- 进度条 -->
-                        <div id="process">
-                            <div id="dot"></div>
-                        </div>
-                        <!-- 时间 -->
-                        <div id="playTime">
-
-                        </div>
-                        <!-- 静音 -->
-                        <div id="mute">
-
-                        </div>
+                <div class="imgcircle">
+                    <div class="imgcirclein">
                     </div>
                 </div>
-                <div class="download">
-                    <img/> 免费下载这首歌
+            </div>
+            <!--音频-->
+            <div class="song">
+                <div class="song_video">
+                    <audio controls loop="true" id="myaudio">
+                    <source type="audio/mp3" src="./video/尚辰 - 无别（《天官赐福》动画片头曲）（翻自 张信哲）.mp3"></source>
+                </audio>
+                    <!--音频开始按钮-->
+                    <div id="start">
+                    </div>
+                    <!-- 进度条 -->
+                    <div id="process">
+                        <div id="dot"></div>
+                    </div>
+                    <!-- 时间 -->
+                    <div id="playTime">
+
+                    </div>
+                    <!-- 静音 -->
+                    <div id="mute">
+
+                    </div>
+                </div>
+            </div>
+            <div class="download">
+                <img/> 免费下载这首歌
+            </div>
+            <div class="alertpromt">
+                <img src="images/谢怜.jpg">
+                <div class="alert1">
+                    <div class="alertname">谢怜</div>
+                    <div class="alertcon">无别-花城-谢怜</div>
+                    <a href="https://music.163.com/#/song?id=1487546210&market=baiduqk">>去听</a>
                 </div>
             </div>
         </div>
-        <!--评论-->
-        <div class="commit">
-            <p class="commit_p1">评论 1703条评论</p>
-            <hr/>
-            <div class="commit1">
-                <img src="./images/花城.jpg" id="commit1_img" />
-                <input type="text" value="分享你的音乐见解" id="text" />
-                <img src="./images/smile.jpg" id="smile" />
-                <input type="button" value="评论" id="addButton" />
-            </div>
-            <hr/>
-            <p id="commit_p">精彩评论</p>
-            <div id="commitlistn">
-                <div id="commitlist">
-                </div>
-            </div>
-            <!-- 分页效果 -->
-            <ul class="page" id="page">
-                <li>
-                    <a id="former" href="##">
-                        < </a>
-                </li>
-                <li><a id="one" href="##"> 1</a></li>
-                <li><a id="two" href="##"> 2</a></li>
-                <li><a id="three" href="##"> 3</a></li>
-                <li class="more"><a id="five" href="##"> ...</a></li>
-                <li><a id="fore" href="##"> 17</a></li>
-                <li>
-                    <a id="next" href="##"> > </a>
-                </li>
-            </ul>
+    </div>
+    <!--评论-->
+    <hr/>
+    <div class="commit">
+        <p class="commit_p1">评论 1703条评论</p>
+        <hr/>
+        <div class="commit1">
+            <img src="./images/花城.jpg" id="commit1_img" />
+            <input type="text" value="分享你的音乐见解" id="text" />
+            <img src="./images/smile.jpg" id="smile" />
+            <input type="button" value="评论" id="addButton" />
         </div>
+        <hr/>
+        <p id="commit_p">精彩评论</p>
+        <div id="commitlistn">
+            <div id="commitlist">
+            </div>
+        </div>
+        <!-- 分页效果 -->
+        <ul class="page" id="page">
+            <li>
+                <a id="former" href="##">
+                    < </a>
+            </li>
+            <li><a id="one" href="##"> 1</a></li>
+            <li><a id="two" href="##"> 2</a></li>
+            <li><a id="three" href="##"> 3</a></li>
+            <li class="more"><a id="five" href="##"> ...</a></li>
+            <li><a id="fore" href="##"> 17</a></li>
+            <li>
+                <a id="next" href="##"> > </a>
+            </li>
+        </ul>
+    </div>
 
 
 
@@ -389,21 +403,6 @@
             console.log(n);
         }
 
-        // if (6 < n < 9) {
-        //     commitlist1.style.display = "none";
-        //     var commitlist2 = document.createElement("div");
-        //     commitlist2.style.width = "800px";
-        //     commitlist2.style.height = "100px";
-        //     // commitlist1.style.border = "1px solid red";
-        //     commitlist2.style.marginLeft = "400px";
-        //     // commitlist1.style.marginTop = "100px";
-        //     commitlistn.appendChild(commitlist2);
-
-
-
-        //     commitlist2.appendChild(newdiv);
-        //     //分页
-        // }
         console.log(n);
         console.log(localStorage.getItem("sticky"));
         console.log(localStorage.getItem('storagetime'));
@@ -420,6 +419,11 @@
 
 
     }
+
+
+
+
+
 
 
     // https://liujing222.github.io/xueli08/index.html
